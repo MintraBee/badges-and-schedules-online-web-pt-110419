@@ -1,12 +1,15 @@
-badges_maker("Arel")
-puts "Hello my name is #{badges_maker}"
+badges_maker("name")
+puts "Hello my name is #{name}"
+end
 
 batch_badges_creator("Edsger", "Ada", "Charles", "Alan", "Grace", "Linus", "Matz")
-
+conference_speaker.collect do |name|
+  badge_maker(name)
+end
 
 def assign_rooms = 
-  counter = 1 
-  
-  
-  
-  counter += 1
+  room = 0 
+  conference_speaker.collect do |name|
+       room += 1
+  puts "Hello, #{conference_speaker}, You'll be assigned to room #{room}"
+ end
